@@ -1,37 +1,14 @@
 export const UPDATE_SLUG = "UPDATE_SLUG";
-export const SCRAWLY_ADD = "SCRAWLY_ADD";
-export const SCRAWLY_ADD_ERROR = "SCRAWLY_ADD_ERROR";
-export const SCRAWLY_ADD_SUCCESS = "SCRAWLY_ADD_SUCCESS";
 export const SCRAWLY_SHOW_ERROR = "SCRAWLY_SHOW_ERROR";
 export const SCRAWLY_SHOW_SUCCESS = "SCRAWLY_SHOW_SUCCESS";
-
+export const SCRAWLY_CREATE_ERROR = "SCRAWLY_CREATE_ERROR";
+export const SCRAWLY_CREATE_SUCCESS = "SCRAWLY_CREATE_SUCCESS";
 
 export function updateSlug(slug) {
     return {
         type: UPDATE_SLUG,
         payload: slug
     };
-}
-
-export function scrawlyAdd(scrawly) {
-    let newScrawly = new scrawly();
-    return  (dispatch) => newScrawly.save(scrawly)
-        .then(
-            success => dispatch(scrawlyAddSuccess(success)),
-            error => dispatch(scrawlyAddError(error))
-        );
-}
-
-export function scrawlyAddSuccess(scrawly) {
-    return {
-        type: SCRAWLY_ADD_SUCCESS,
-        payload:  scrawly  };
-}
-
-export function scrawlyAddError(error) {
-    return {
-        type: SCRAWLY_ADD_ERROR,
-        payload: error };
 }
 
 export function scrawlyShow(slug) {
@@ -55,4 +32,43 @@ export function scrawlyShowSuccess(scrawl) {
     };
 }
 
-export function scrawlyShowError() {}
+export function scrawlyShowError() {
+    return { type: SCRAWLY_SHOW_ERROR };
+}
+
+{/* Scrawly Create*/}
+
+export function scrawlyCreate(title, slug) {
+    return dispatch => {
+        fetch(process.env.REACT_APP_API + '/polls', {
+            method: 'POST',
+            headers: {
+
+            },
+            body: JSON.stringify({
+                "title": title,
+                "slug": slug
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data["@type"] !== "hydra:Error") {
+                    dispatch(scrawlyCreateSuccess(data));
+                } else {
+                    dispatch(scrawlyCreateError());
+                }
+            })
+    }
+}
+
+export function scrawlyCreateSuccess(scrawl) {
+    return {
+        type: SCRAWLY_SHOW_SUCCESS,
+        payload: scrawl
+    };
+}
+
+export function scrawlyCreateError() {
+}
+
+

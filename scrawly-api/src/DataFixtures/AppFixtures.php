@@ -16,7 +16,7 @@ class AppFixtures extends Fixture
          * Poll
          */
         $poll1 =  new Poll();
-        $poll1-> setTitle("aniv yann");
+        $poll1-> setTitle("anniv-yann");
         $poll1-> setSlug("anniv-yann");
         $poll1-> setCreatedAt(new \DateTime('2019-08-18 T10:00:00'));
         $manager->persist ($poll1);
@@ -24,14 +24,14 @@ class AppFixtures extends Fixture
          * Person
          */
         $person1 = new Person();
-        $person1->setUsername("Nicolas Hermange");
-        $person1->setEmail("nicolas@gmail.com");
+        $person1->setUsername("Krusty");
+        $person1->setEmail("krusty@gmail.com");
         $person1->setPoll($poll1);
         $manager->persist ($person1);
 
         $person2 = new Person();
-        $person2->setUsername("Jhon Doe");
-        $person2->setEmail("jhon@gmail.com");
+        $person2->setUsername("Tahiti Bob");
+        $person2->setEmail("tahiti@gmail.com");
         $person2->setPoll($poll1);
         $manager->persist ($person2);
         /**

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class Homepage extends Component {
 
@@ -8,6 +9,11 @@ class Homepage extends Component {
     }
 
     render() {
+
+        if (this.props.id) {
+            return <Redirect to={"/scrawl/" + this.props.slug}/>
+        }
+
         return(
             <div className="homepage bg-blue">
                 <h1>Scrawly</h1>
