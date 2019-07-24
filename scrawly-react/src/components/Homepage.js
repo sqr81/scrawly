@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import {Link} from "react-router-dom";
 
 class Homepage extends Component {
 
@@ -21,7 +22,7 @@ class Homepage extends Component {
                     <input type="text" placeholder="Scrawl slug" value={this.props.slug} onChange={event => this.props.updateSlug(event.target.value)}/>
                     <input type="submit" value="GO!"/>
                 </form>
-                <a href="http://localhost:3000/" className="btn">Create a new Scrawl</a>
+                <Link className="btn" to={"/scrawlnew"} >Créer un nouveau Scrawl</Link>
             </div>
         );
     }

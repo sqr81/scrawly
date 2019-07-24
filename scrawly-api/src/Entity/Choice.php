@@ -19,7 +19,7 @@ class Choice
     private $id;
     /**
      * @Groups({"poll"})
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $date;
     /**
