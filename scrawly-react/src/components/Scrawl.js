@@ -78,7 +78,7 @@ class Scrawl extends Component {
                             <tr>
                                 <td>
                                     <div className="user-container">
-                                        <img src="https://www.gravatar.com/avatar/3f8389957d0c59bb0bd5433e86b53a19?s=32" alt="picoudou" />
+                                        <img src="https://www.gravatar.com/avatar/3f8389957d0c59bb0bd5433e86b53a19?s=32" alt="krusty" />
                                         <span>Jack Fieldman</span>
                                     </div>
                                 </td>
