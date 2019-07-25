@@ -70,7 +70,7 @@ class Scrawl extends Component {
                                 <td className="available"><i className="fa fa-3x fa-check-circle" /></td>
                                 <td className="unavailable"><i className="fa fa-3x fa-times-circle" /></td>
                                 <td>
-                                    <a href="new.html">
+                                    <a href="scrawl.html">
                                         <i className="fa fa-2x fa-edit" />
                                     </a>
                                 </td>
@@ -89,7 +89,7 @@ class Scrawl extends Component {
                                 <td className="unavailable"><i className="fa fa-3x fa-times-circle" /></td>
                                 <td className="available"><i className="fa fa-3x fa-check-circle" /></td>
                                 <td>
-                                    <a href="new.html">
+                                    <a href="scrawl.html">
                                         <i className="fa fa-2x fa-edit" />
                                     </a>
                                 </td>
@@ -97,7 +97,7 @@ class Scrawl extends Component {
                             <tr>
                                 <td>
                                     <div className="user-container">
-                                        <img src="https://www.gravatar.com/avatar/7fda1da9c34e978d5990afd7f58ca0f4?s=32" alt="picoudou" />
+                                        <img src="https://www.gravatar.com/avatar/7fda1da9c34e978d5990afd7f58ca0f4?s=32" alt="krusty" />
                                         <span>Howard Thomson</span>
                                     </div>
                                 </td>
@@ -108,7 +108,7 @@ class Scrawl extends Component {
                                 <td className="available"><i className="fa fa-3x fa-check-circle" /></td>
                                 <td className="available"><i className="fa fa-3x fa-check-circle" /></td>
                                 <td>
-                                    <a href="new.html">
+                                    <a href="scrawl.html">
                                         <i className="fa fa-2x fa-edit" />
                                     </a>
                                 </td>
